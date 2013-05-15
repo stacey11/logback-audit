@@ -27,14 +27,14 @@
 
     <p>Logback-audit is a logging framework specialized for
     auditing. In logback-audit, a logging message consists of a
-    subject, a verb and an object, and with optional predicates.
+    subject, a verb and an object. The message may also contain optional predicates.
     </p>
 
     <h2> <a name="basy_step" href="#first_baby_step">First Baby
     Step</a></h2>
     
     
-    <p>Let us begin by presenting a minial application which logs an
+    <p>Let us begin by presenting a minimal application which logs an
     audit message.</p>
 
 
@@ -84,9 +84,9 @@ href="../audit-examples/resources/BabyStep/logback-audit.xml">audit-examples/src
   predicateMap = {}, originatingApplication=null, \ 
   clientApplication=Appl(name=BabyStep, ip=localhost))</p>
 
-  <p>The above is essantially a string representation of an
+  <p>The above is essentially a string representation of an
   AuditEvent, consisting of a subject, a verb, an object, an optional
-  list of predicates, the originating application if any, the client
+  list of predicates, the originating application (if any), and the client
   application. The client application is the application actually
   invoking the logback-audit API. The originating application is the
   application causing the audit event to occur. If the originating
